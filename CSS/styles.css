@@ -1,0 +1,240 @@
+* {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.3s ease-in-out;
+}
+
+#titleContainer {
+    position: absolute;
+    bottom: 50%;
+    text-align: center;
+    font-size: max(3vh, 20px);
+    padding: 1vh 1vw;
+    border: white 3px solid;
+
+    background-color: #868585;
+    color: transparent;
+    text-shadow: 1px 1px 1.5px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+
+#titleContainer h1 {
+    margin: 0;
+}
+
+#titleContainer p, button {
+    font-size: max(1.5vh, 10px);
+    text-transform: uppercase;
+}
+
+#titleContainer button {
+    padding: max(2vh, 10px);
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 12px;
+}
+
+#weatherContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 68vh;
+
+    padding-left: 10vw;
+    padding-top: 10vh;
+}
+
+#cityName {
+    font-size: max(4vh, 20px);
+    padding: 0;
+    margin: 0;
+}
+
+#temperature {
+    font-size: max(20vh, 40px);
+    font-weight: 200; 
+}
+
+#minMaxContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: max(1vh, 10px) 0 5vh;
+}
+
+#tempMinIcon,
+#tempMaxIcon {
+    height: max(3vh, 28px);
+}
+
+#tempMax,
+#tempMin {
+    font-size: max(4vh, 30px);
+}
+
+#tempMax {
+    padding-right: 3vw;
+}
+
+#descriptionContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 9vh 1fr;
+    align-items: center;
+    grid-row-gap: 1vh;
+}
+
+#weatherIcon {
+    font-size: max(5vh, 20px);
+    color: black;
+    font-weight: 100;
+    padding-bottom: 2vh;
+}
+
+#windIcon,
+#humidityIcon {
+    height: 5vh;
+}
+
+#feelsLike,
+#minMaxContainer {
+    font-size: max(2vh, 12px);
+}
+
+.weatherData {
+    font-size: max(2vh, 15px);
+    margin: 0;
+}
+
+#searchContainer {
+    margin: 5vh 5vw;
+
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    width: min(500px, max(60vw, 300px));
+    transition: all 0.3s ease-in-out;
+}
+
+#searchBox {
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: max(4vh, 40px);
+}
+
+#searchInput,
+#searchButton,
+#unitsButton {
+    font-size: max(2vh, 10px);
+    border-radius: inherit;
+    padding: 1vh 2vw;
+
+    border: none;
+    color: black;
+    background-color: inherit;
+}
+
+#searchInput::placeholder {
+    color: gray;
+}
+
+#searchInput {
+    padding: 1vh 1vw 1vh 6vh;
+    background-image: url("/images/magnifying-glass.svg");
+    background-size: 2vh;
+    background-repeat: no-repeat;
+    background-position: 2vh center;
+    margin-right: 5px;
+    width: 100%;
+}
+
+#unitsButton {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#toggleContainer {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    
+    border-radius: 10px;
+    width: min-content;
+    font-size: max(2vh, 10px);
+    padding: max(0.1vw, 5px) max(0.1vh, 5px);
+    margin-bottom: 5px;
+  }
+
+  #metricLabel {
+    margin-right: max(0.5vw, 5px);
+    margin-left: max(0.5vw, 5px); 
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+  }
+
+  #imperialLabel {
+    margin-right: max(0.5vw, 5px);
+    margin-left: max(0.5vw, 5px); 
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+  }
+  
+  .switch {
+    background-color: blue;
+    border-radius: 20px;
+    height: max(3vh, 20px);
+    width: max(6vh, 40px);
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .switch::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: max(2.6vh, 17px);
+    height: max(2.6vh, 17px);
+    transition: all 0.3s ease-in-out;
+    margin: max(0.2vh, 2px);
+  }
+  
+  .unitCheckbox:checked + .switch::after {
+    transform: translate(max(3vh, 19px));
+  }
+  
+  .unitCheckbox:checked + .switch {
+    background-color: #4BD763;
+  }
+  
+  .unitCheckbox {
+    display: none;
+  }

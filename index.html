@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="stylesheet" href="CSS/weather-icons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <body>
+        <div id="titleContainer">
+            <h1>Weather App</h1>
+            <p>By Harry Daniels</p>
+            <button onClick="findLocation()">Find My Location</button>
+        </div>
+        <div id="weatherContainer">
+            <div id="temperatureDescription">
+                <h2 id="currentDate" class="weatherData"></h2>
+                <h1 id="cityName"></h1>
+                <div id="weatherMain">
+                    <div id="temperature"></div>
+                    <div id="feelsLike"></div>
+                    <div id="minMaxContainer">
+                        <div><img id="tempMaxIcon"></div>
+                        <div id="tempMax"></div>
+                        <div><img id="tempMinIcon"></div>
+                        <div id="tempMin"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="descriptionContainer">
+                    <div><i id="weatherIcon"></i></div>
+                    <div id="weatherDescription" class="weatherData"></div>
+
+                    <div><img id="windIcon"></div>
+                    <div id="windSpeed" class="weatherData"></div>
+
+                    <div><img id="humidityIcon"></div>
+                    <div id="humidity" class="weatherData"></div>
+            </div>
+        </div>
+        <div id="searchContainer">
+            <div id="searchBox">
+                <input id="searchInput" type="text" placeholder="City Name...">
+                <button id="searchButton">Search</button>
+            </div>
+
+            <div id="toggleContainer">
+                <div id="metricLabel">Metric</div>
+                <div id="imperialLabel">Imperial</div>
+                <input type="checkbox" id="toggle" class="unitCheckbox" checked/>
+                <label for="toggle" class="switch"></label>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
