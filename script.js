@@ -176,7 +176,7 @@ const findLocation = () => {
         const lon = position.coords.longitude
         const limit = 1
 
-        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${appId}`).then(result => {
+        fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid=${appId}`).then(result => {
             return result.json()
         }).then(result => {
             let currentLocation = result[0].name
