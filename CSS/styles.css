@@ -164,7 +164,7 @@ body {
 
 #searchInput {
     padding: 1vh 1vw 1vh 6vh;
-    background-image: url("/images/magnifying-glass.svg");
+    background-image: url("images/magnifying-glass.svg");
     background-size: 2vh;
     background-repeat: no-repeat;
     background-position: 2vh center;
